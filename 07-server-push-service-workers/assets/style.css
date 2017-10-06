@@ -1,3 +1,5 @@
 .myHelloClass {
-  background-color: aquamarine;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: green;
+  color: yellow;
 }
