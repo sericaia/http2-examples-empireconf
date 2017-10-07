@@ -8,7 +8,10 @@ const options = {
 
 const server = http2.createSecureServer(options);
 server.on('stream', (stream, requestHeaders) => {
-  stream.respond();
-  stream.end('Hi, EmpireConf!');
+  stream.respond({
+    'content-type': 'text/html',
+    ':status': 200
+  });
+  stream.end('<h1>Hi, EmpireConf</h1>');
 });
 server.listen(3000);
