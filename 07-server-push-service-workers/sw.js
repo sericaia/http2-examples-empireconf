@@ -8,8 +8,7 @@ this.addEventListener('install', function(event) {
       return cache.addAll([
         '/',
         'app.js',
-        'favicon.ico',
-        'picture.png',
+        'empireconf-placeholder.png',
         'style.css'
       ].map(u => new Request(u, { credentials: 'include' })))
     })
@@ -28,6 +27,6 @@ this.addEventListener('fetch', function(event) {
     });
     return response.clone();
   }).catch(function() {
-    return caches.match('picture.png');
+    return caches.match('empireconf-placeholder.png');
   }));
 });
